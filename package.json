@@ -5,9 +5,16 @@
   "engines": {
     "atom": "+"
   },
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chmaltsp/react-redux-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chmaltsp/react-redux-snippets/issues"
   },
   "keywords": [
     "React",
