@@ -1,0 +1,22 @@
+{
+  "name": "react-redux-snippets",
+  "version": "0.0.0",
+  "description": "React and Redux Snippets for a modern development using es6 and es7",
+  "engines": {
+    "atom": "+"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Snippets",
+    "ES6",
+    "ES7",
+    "Enzyme"
+  ],
+  "author": "Philip Chmalts",
+  "license": "MIT"
+}
