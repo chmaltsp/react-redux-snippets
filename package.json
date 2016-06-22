@@ -11,7 +11,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/chmaltsp/react-redux-snippets.git"
+    "url": "git+https://github.com/chmaltsp/react-redux-snippets.git"
   },
   "bugs": {
     "url": "https://github.com/chmaltsp/react-redux-snippets/issues"

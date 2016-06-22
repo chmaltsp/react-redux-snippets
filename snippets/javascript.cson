@@ -1,0 +1,6 @@
+'.source.js.jsx':
+  'action type':
+    'prefix': 'act-t'
+    'body': """
+    export const $1 = '$2'
+    """
