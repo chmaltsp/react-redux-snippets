@@ -9,7 +9,8 @@
 3 info using node@v4.4.5
 4 info git [ 'status', '--porcelain' ]
 5 verbose stack Error: Git working directory not clean.
-5 verbose stack M README.md
+5 verbose stack M .gitignore
+5 verbose stack M npm-debug.log
 5 verbose stack     at /Applications/Atom Beta.app/Contents/Resources/app/apm/node_modules/npm/lib/version.js:247:19
 5 verbose stack     at /Applications/Atom Beta.app/Contents/Resources/app/apm/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
 5 verbose stack     at ChildProcess.exithandler (child_process.js:204:7)
@@ -26,7 +27,8 @@
 9 error node v4.4.5
 10 error npm  v3.10.5
 11 error Git working directory not clean.
-11 error M README.md
+11 error M .gitignore
+11 error M npm-debug.log
 12 error If you need help, you may report this error at:
 12 error     <https://github.com/npm/npm/issues>
 13 verbose exit [ 1, true ]
