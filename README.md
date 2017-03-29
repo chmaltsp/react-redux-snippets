@@ -174,3 +174,17 @@ export function* ${1:defaultSagaName}() {
 
 export default [${1:defaultSagaName}];
 ```
+
+#### Saga api call - `saga-a`
+
+```javascript
+try {
+  const response = yield call(api, '${1:method}', '${2:/endpoint}', {
+    data
+  });
+  console.log(response);
+  $3
+} catch (error) {
+  console.error(error);
+}
+```

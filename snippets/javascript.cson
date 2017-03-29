@@ -184,3 +184,68 @@
 
     export default [${1:defaultSagaName}];
     """
+  'Saga Api Call':
+    'prefix': 'saga-a'
+    'body': """
+      try {
+        const response = yield call(api, '${1:method}', '${2:/endpoint}', {
+          data
+        });
+        console.log(response);
+        $3
+      } catch (error) {
+        console.error(error);
+      }
+    """
+  'Enzyme Component Test':
+    'prefix': 'ect-f'
+    'body': """
+    import React from 'react';
+    import { shallow } from 'enzyme';
+    import toJson from 'enzyme-to-json';
+    import { ${1:Component} } from '../${4:filename}';
+
+    describe('<${1:Component}', () => {
+      const renderedComponent = (props = {}) => shallow(<${1:Component} {...props} />);
+
+      const props = {
+        ${2:prop}: ${3:value}
+      };
+      it('should render without blowing up', () => {
+        expect(toJson(renderedComponent(props))).toMatchSnapshot();
+      });
+    });
+    """
+  'Enzyme Test Instance Method':
+    'prefix': 'ect-i'
+    'body': """
+     it('${2:should}', () => {
+      const component = renderedComponent(props).instance();
+      component.${1:method}();
+      expect(${3:assert}).${4:toEqual(1)};
+     });
+     """
+  'Jest Map Dispatch to Props Test':
+    'prefix': 'j-mdp'
+    'body': """
+    describe('mapDispatchToProps', () => {
+      const dispatch = jest.fn();
+      const result = mapDispatchToProps(dispatch);
+
+       it('should call dispatch when {1:methodToDispatch} is called', () => {
+        result.{1:methodToDispatch}();
+        expect(dispatch.mock.calls.length).toEqual(1);
+      });
+    });
+    """
+  'Enzyme styled component check':
+    'prefix': 'ect-s'
+    'body': """
+    describe('<${1:Component} />', () => {
+      const component = shallow(<${1:Component} {...props} />);
+
+      it('should render without blowing up', () => {
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+    """
