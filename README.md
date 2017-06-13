@@ -60,7 +60,67 @@ export function ${1: actionCreatorName} (${3:payload}) {
 
   export default ${1:ComponentName};
 
-  ```
+```
+#### Redux Store File - `res-f`
+```javascript
+  /**
+   *  ${1:storeName} store
+   */
+
+  import {createStore} from 'redux';
+
+  // Import Reducers. For example, a combined reducer
+  import { ${2:reducer} } from './reducers';
+
+  export default function configureStore(initialState) {
+    return createStore(
+      ${2:reducer},
+      initialState
+    );
+  }
+
+```  
+#### Redux Container Component File - `recon-f`
+```javascript
+  import React, { PropTypes } from 'react';
+  import {connect} from 'react-redux';
+  import {bindActionCreators} from 'redux';
+
+  /**
+   * ${1:ComponentName}
+   */
+  export class ${1:ComponentName} extends React.Component {
+    constructor(props, context) {
+      super(props, context);
+    }
+
+    render() {
+      return (
+        <div>MY COMPONENT</div>
+      );
+    }
+  }
+
+  ${1:ComponentName}.propTypes = {
+    ${2:prop}: PropTypes.${3:type}.isRequired
+  }
+
+  function mapStateToProps(state, ownProps) {
+    return {
+      state: state
+    };
+  }
+
+  function mapDispatchToProps(dispatch) {
+    return {
+      actions: bindActionCreators(actions, dispatch)
+    };
+  }
+
+  export default connect(mapStateToProps, mapDispatchToProps)(${1:ComponentName});
+
+```  
+
 ## React Component Snippets
 #### React Component  - `rcc`
 
